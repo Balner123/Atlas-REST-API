@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas</title>
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        /* Vlastní styly pro karty */
+        .card {
+            margin-bottom: 20px; /* Odsazení mezi kartami */
+        }
+
+        .card-img-top {
+            height: 200px; /* Výška obrázku */
+            object-fit: cover; /* Zajistí, že obrázek bude plně vyplňovat svůj kontejner */
+            border-radius: 10px 10px 0 0; /* Zakulacené rohy pro horní část karty */
+        }
+
+        .card-body {
+            padding: 15px; /* Odsazení uvnitř těla karty */
+        }
+
+        .card-title {
+            margin-bottom: 0; /* Odstranění odsazení u názvu */
+        }
+
+        .card-text {
+            margin-bottom: 10px; /* Odsazení mezi textem */
+        }
+
+        .card-group {
+            display: flex; /* Flexbox layout pro zarovnání karet */
+            flex-wrap: wrap; /* Zarovnání do více řádků */
+        }
+
+        .card {
+            flex: 1 1 calc(33.3333% - 20px); /* Rozměry karet (33.3333% šířky s mezerou mezi kartami) */
+            margin-right: 20px; /* Mezera mezi kartami */
+        }
+
+        @media (max-width: 991.98px) {
+            .card {
+                flex: 1 1 calc(50% - 20px); /* Na menších zařízeních zobrazit 2 karty v řádku */
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .card {
+                flex: 1 1 calc(100% - 20px); /* Na mobilních zařízeních zobrazit 1 kartu na celou šířku */
+                margin-right: 0; /* Odstranění mezery mezi kartami */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="text-center mt-3 mb-5">Atlas</h1>
+    </header>
+    <main class="container">
+        <div class="card-group" id="staty">
+            <!-- Karty se budou vloženy sem dynamicky -->
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

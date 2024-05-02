@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.card-img-top {
+    width: 50%; /* Zajistí, že obrázek bude plně vyplňovat svůj kontejner */
+    height: 100px; /* Nebo jakoukoli vhodnou výšku */
+    object-fit: cover; /* Zajistí, že obrázek bude vyplňovat rozměry kontejneru, aniž by zkresloval jeho původní poměr stran */
+    border-radius: 50%; /* Tvoří kruhový tvar */
+}
