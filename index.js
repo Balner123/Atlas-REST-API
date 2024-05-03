@@ -16,7 +16,6 @@ function fern(region){
     data.forEach(stat => {
       let blockcountry = `<div class="col-xl-2 col-lg-3 col-md-4 col-sm-5">
         <div class="card h-300 w-200" data-bs-toggle="modal" data-bs-target="#myModal" data-country="${stat.name.official}">
-          <a href="${stat.maps.googleMaps}" target="_blank">
             <img class="card-img-top" src="${stat.flags.png}" alt="${stat.name.official}" />
           </a> 
           <div class="card-body">
@@ -47,7 +46,7 @@ function renderModalContent(countryData) {
     <h5>${countryData.translations.ces.common}</h5>
     <p>Population: ${countryData.population}</p>
     <p>Area: ${countryData.area} km<sup>2</sup></p>
-    <!-- Další informace o zemi -->
+    <a href="https://www.google.com/maps/place/${countryData.maps.googleMaps}" target="_blank">Zobrazit na mapě Google</a>
   `;
 }
 
