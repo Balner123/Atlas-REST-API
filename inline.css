@@ -9,3 +9,44 @@ h1{
     object-fit: cover; /* Zajistí, že obrázek bude vyplňovat rozměry kontejneru, aniž by zkresloval jeho původní poměr stran */
     border-radius: 50%; /* Tvoří kruhový tvar */
 }
+
+
+.card {
+    margin-bottom: 20px; /* Odsazení mezi kartami */
+}
+
+
+.card-body {
+    padding: 15px; /* Odsazení uvnitř těla karty */
+}
+
+.card-title {
+    margin-bottom: 0; /* Odstranění odsazení u názvu */
+}
+
+.card-text {
+    margin-bottom: 10px; /* Odsazení mezi textem */
+}
+
+.card-group {
+    display: flex; /* Flexbox layout pro zarovnání karet */
+    flex-wrap: wrap; /* Zarovnání do více řádků */
+}
+
+.card {
+    flex: 1 1 calc(33.3333% - 20px); /* Rozměry karet (33.3333% šířky s mezerou mezi kartami) */
+    margin-right: 20px; /* Mezera mezi kartami */
+}
+
+@media (max-width: 991.98px) {
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Na menších zařízeních zobrazit 2 karty v řádku */
+    }
+}
+
+@media (max-width: 767.98px) {
+    .card {
+        flex: 1 1 calc(100% - 20px); /* Na mobilních zařízeních zobrazit 1 kartu na celou šířku */
+        margin-right: 0; /* Odstranění mezery mezi kartami */
+    }
+}

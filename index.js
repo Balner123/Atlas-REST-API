@@ -1,7 +1,14 @@
 const staty = document.getElementById('staty');
 const modalBody = document.querySelector('.modal-body');
 
-fetch('https://restcountries.com/v3.1/region/europe')
+
+
+function fern(region){
+
+  staty.innerHTML = '';
+
+
+  fetch(`https://restcountries.com/v3.1/${region}`)
   .then((Response) => Response.json())
   .then((data) => {
     console.log(data);
@@ -14,15 +21,13 @@ fetch('https://restcountries.com/v3.1/region/europe')
           </a> 
           <div class="card-body">
             <h4 class="card-title">${stat.translations.ces.common}</h4>
-            <p class="card-text">population : ${stat.population}</p>
-            <p>Rozloha ${stat.area} km<sup>2</sup></p>
+            
           </div>
         </div>
       </div>`;
       staty.innerHTML += blockcountry;
     });
 
-    // Událost kliknutí na kartu
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
       card.addEventListener('click', function() {
@@ -33,7 +38,10 @@ fetch('https://restcountries.com/v3.1/region/europe')
     });
   });
 
-// Funkce pro zobrazení obsahu modálního okna
+}
+
+
+
 function renderModalContent(countryData) {
   modalBody.innerHTML = `
     <h5>${countryData.translations.ces.common}</h5>
@@ -42,3 +50,6 @@ function renderModalContent(countryData) {
     <!-- Další informace o zemi -->
   `;
 }
+
+
+fern('all');
