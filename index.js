@@ -45,7 +45,9 @@ function fern(region){
 
 function renderModalContent(countryData) {
   modalBody.innerHTML = `
+  
     <h5>${countryData.translations.ces.common}</h5>
+    <img src="${countryData.flags.png}" alt="${countryData.name.official}" />
     <p>Population: ${countryData.population}</p>
     <p>Area: ${countryData.area} km<sup>2</sup></p>
     <a href="https://www.google.com/maps/place/${countryData.maps.googleMaps}" target="_blank">Zobrazit na mapě Google</a>
