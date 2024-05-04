@@ -4,49 +4,99 @@ h1{
 }
 
 .card-img-top {
-    width: 50%; /* Zajistí, že obrázek bude plně vyplňovat svůj kontejner */
-    height: 100px; /* Nebo jakoukoli vhodnou výšku */
-    object-fit: cover; /* Zajistí, že obrázek bude vyplňovat rozměry kontejneru, aniž by zkresloval jeho původní poměr stran */
-    border-radius: 50%; /* Tvoří kruhový tvar */
+    width: 50%; 
+    height: 100px;
+    object-fit: cover;  
+    border-radius: 50%;
 }
 
 
 .card {
-    margin-bottom: 20px; /* Odsazení mezi kartami */
+    margin-bottom: 20px; 
 }
 
 
 .card-body {
-    padding: 15px; /* Odsazení uvnitř těla karty */
+    padding: 15px;
 }
 
 .card-title {
-    margin-bottom: 0; /* Odstranění odsazení u názvu */
+    margin-bottom: 0;
 }
 
 .card-text {
-    margin-bottom: 10px; /* Odsazení mezi textem */
+    margin-bottom: 10px; /
 }
 
 .card-group {
-    display: flex; /* Flexbox layout pro zarovnání karet */
-    flex-wrap: wrap; /* Zarovnání do více řádků */
+    display: flex; 
+    flex-wrap: wrap; 
 }
 
 .card {
-    flex: 1 1 calc(33.3333% - 20px); /* Rozměry karet (33.3333% šířky s mezerou mezi kartami) */
-    margin-right: 20px; /* Mezera mezi kartami */
+    flex: 1 1 calc(33.3333% - 20px); 
+    margin-right: 20px; 
 }
 
 @media (max-width: 991.98px) {
     .card {
-        flex: 1 1 calc(50% - 20px); /* Na menších zařízeních zobrazit 2 karty v řádku */
+        flex: 1 1 calc(50% - 20px);
     }
 }
 
 @media (max-width: 767.98px) {
     .card {
-        flex: 1 1 calc(100% - 20px); /* Na mobilních zařízeních zobrazit 1 kartu na celou šířku */
-        margin-right: 0; /* Odstranění mezery mezi kartami */
+        flex: 1 1 calc(100% - 20px);
+        margin-right: 0; 
     }
 }
+
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+
+
+  #loadP{
+    display: block;
+  }

@@ -9,21 +9,26 @@
     <link rel="stylesheet" href="inline.css">
   
 </head>
-<body>
+<body onload="loading()">
     <header>
-        <button onclick="fern('region/europe')">Europe</button>
-        <button onclick="fern('region/asia')">Asia</button>
-        <button onclick="fern('region/Americas')">Americas</button>
+        <button onclick="loading();fern('all')">ALL</button>
+        <button onclick="loading();fern('region/europe')">Europe</button>
+        <button onclick="loading();fern('region/asia')">Asia</button>
+        <button onclick="loading();fern('region/Americas')">Americas</button>
 
         <h1 class="text-center mt-3 mb-5">Atlas</h1>
     </header>
-    <main class="container">
+
+    
+    <main class="container" id="loadP">
+
+
+        
         <div class="card-group" id="staty">
           
         </div>
     </main>
 
-    <!-- Modální okno -->
     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -32,13 +37,16 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- Sem se budou vkládat detaily země -->
+                    
                 </div>
             </div>
         </div>
     </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
+
+<div id="loader"></div>
 </html>

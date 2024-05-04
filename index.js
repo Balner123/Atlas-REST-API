@@ -5,6 +5,8 @@ const modalBody = document.querySelector('.modal-body');
 
 function fern(region){
 
+
+
   staty.innerHTML = '';
 
 
@@ -52,3 +54,20 @@ function renderModalContent(countryData) {
 
 
 fern('all');
+
+
+var time;
+
+function loading(){
+  document.getElementById("loader").style.display = "block";
+  document.getElementById("loadP").style.display = "none";
+  time = setTimeout(showP, 1000);
+}
+
+function showP(){
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("loadP").style.display = "block";
+}
+
+
+
